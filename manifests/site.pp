@@ -3,6 +3,6 @@ node default{
     ensure => file, 
   }
 }
-node 'master.pappet.vm' {
+node 'master.puppet.vm' {
   include role::master_server
 }
