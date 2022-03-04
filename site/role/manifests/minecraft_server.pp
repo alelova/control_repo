@@ -1,4 +1,4 @@
 class role::minecraft {
-  include profile::basic
+  include profile::base
   include profile::minecraft
 }
