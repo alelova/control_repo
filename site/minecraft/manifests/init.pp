@@ -1,10 +1,11 @@
 class minecraft {
+$url='https://s3.amazonaws.com/Minecraft.Download/versions/1.12.1/minecraft_server.1.12.1.jar'
   file{'/opt/minecraft':
     ensure => directory,
   }
   file{'/opt/minecraft/minecraft_server.jar':
     ensure => file,
-    source => 'https://s3.amazonaws.com/Minecraft.Download/versions/1.12.1/minecraft_server.1.12.1.jar',
+    source => $url,
   }
   package {java:
     ensure => present,
