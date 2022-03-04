@@ -20,7 +20,7 @@ class minecraft {
   service {'minecraft':
     ensure => running,
     enable => true,
-    requier=> [Package['java'], file['/opt/minecraft/minecraft_server.jar']]
+    require=> [Package['java'], File['/opt/minecraft/minecraft_server.jar']]
   }
 
 }
